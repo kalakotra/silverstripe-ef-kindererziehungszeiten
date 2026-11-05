@@ -1,0 +1,11 @@
+---
+Name: eform-kindererziehungszeiten
+---
+# Signature defaults (mm from top-left of the last page, next to
+# "Unterschrift des Elternteils, der den Antrag stellt", Ziffer 14).
+# PDFMultiFormPage.SignaturePositionX / SignaturePositionY in the CMS take precedence.
+#
+# Kalakotra\EFormKindererziehungszeiten\Model\Submission:
+#   signature_default_x: 108.0
+#   signature_default_y: 110.0
+#   signature_width: 55.0

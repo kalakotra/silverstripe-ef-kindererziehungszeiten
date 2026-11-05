@@ -296,6 +296,6 @@ bs:
   Kalakotra\EFormKindererziehungszeiten\Forms\StepTrait:
     REQUIRED: '"{name}" je obavezno polje.'
   Kalakotra\EFormKindererziehungszeiten\Forms\Form:
+    SAVE_ERROR: 'Došlo je do problema pri spremanju podataka. Molimo pokušajte ponovo.'
     BOOLEAN_YES: 'Da'
     BOOLEAN_NO: 'Ne'
-    SAVE_ERROR: 'Došlo je do problema pri spremanju podataka. Molimo pokušajte ponovo.'

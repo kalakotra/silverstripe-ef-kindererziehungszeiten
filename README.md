@@ -70,7 +70,7 @@ Max. 2 children per application (form limit). Not filled on purpose: signature d
 
 ## Translations
 
-`lang/de.yml`, `en.yml`, `bs.yml`. Every label is a literal `_t(__CLASS__ . '.Field', 'German default')` (collectable by
+`lang/*.yml`: ar, bg, bs, cs, de, en, es, fr, it, pl, ro, ru, tr, uk (same set as anmeldung-bremen). Every label is a literal `_t(__CLASS__ . '.Field', 'German default')` (collectable by
 `i18nTextCollectorTask`); options use `<StepClass>.<Field>.<value>`, empty option `DEFAULT_SELECT`,
 which is what `BaseMultiForm::PreviewSteps()` resolves for labels and option values.
 

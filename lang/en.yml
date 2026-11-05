@@ -296,6 +296,6 @@ en:
   Kalakotra\EFormKindererziehungszeiten\Forms\StepTrait:
     REQUIRED: '"{name}" is required.'
   Kalakotra\EFormKindererziehungszeiten\Forms\Form:
+    SAVE_ERROR: 'There was a problem saving your data. Please try again.'
     BOOLEAN_YES: 'Yes'
     BOOLEAN_NO: 'No'
-    SAVE_ERROR: 'There was a problem saving your data. Please try again.'

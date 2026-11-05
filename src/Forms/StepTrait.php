@@ -47,12 +47,16 @@ trait StepTrait
     protected function validateConditionalRequired($data, $form): bool
     {
         $required = (array) ($this->config()->get('conditional_required') ?? []);
-        if ($required === [] || !is_array($data)) {
+        if ($required === []) {
             return true;
         }
 
+        // Use the form's normalised data, NOT the raw request ($data): unchecked checkboxes are
+        // missing from the request, which made their dependent fields look active (and the
+        // resulting error was attached to a hidden field -> silent redirect back to the same step).
+        $data = $form->getData();
         $rules = self::fieldConditionRules();
-        $valid = true;
+        $missing = [];
 
         foreach ($required as $fieldName) {
             if (!FieldConditions::isActive($fieldName, $data, $rules)) {
@@ -66,15 +70,24 @@ trait StepTrait
 
             $field = $form->Fields()->dataFieldByName($fieldName);
             $label = $field ? strip_tags((string) $field->Title()) : $fieldName;
+            $missing[] = $label;
 
             $form->sessionFieldError(
                 _t(__TRAIT__ . '.REQUIRED', '"{name}" ist erforderlich.', ['name' => $label]),
                 $fieldName
             );
-            $valid = false;
         }
 
-        return $valid;
+        if ($missing !== []) {
+            // form-level summary, so a failed validation is never invisible
+            $form->sessionMessage(_t(
+                __TRAIT__ . '.REQUIRED_SUMMARY',
+                'Bitte füllen Sie die folgenden Pflichtfelder aus: {fields}',
+                ['fields' => implode(', ', $missing)]
+            ));
+        }
+
+        return $missing === [];
     }
 
     /**

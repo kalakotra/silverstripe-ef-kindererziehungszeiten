@@ -295,6 +295,7 @@ bs:
     SignatureRequired: 'Molimo potpišite zahtjev.'
   Kalakotra\EFormKindererziehungszeiten\Forms\StepTrait:
     REQUIRED: '"{name}" je obavezno polje.'
+    REQUIRED_SUMMARY: 'Molimo popunite sljedeća obavezna polja: {fields}'
   Kalakotra\EFormKindererziehungszeiten\Forms\Form:
     SAVE_ERROR: 'Došlo je do problema pri spremanju podataka. Molimo pokušajte ponovo.'
     BOOLEAN_YES: 'Da'

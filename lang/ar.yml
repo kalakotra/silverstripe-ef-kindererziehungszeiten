@@ -295,6 +295,7 @@ ar:
     SignatureRequired: 'يرجى التوقيع على الطلب.'
   Kalakotra\EFormKindererziehungszeiten\Forms\StepTrait:
     REQUIRED: 'حقل "{name}" مطلوب.'
+    REQUIRED_SUMMARY: 'يرجى ملء الحقول الإلزامية التالية: {fields}'
   Kalakotra\EFormKindererziehungszeiten\Forms\Form:
     SAVE_ERROR: 'حدثت مشكلة أثناء حفظ بياناتك. يرجى المحاولة مرة أخرى.'
     BOOLEAN_YES: 'نعم'

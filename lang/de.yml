@@ -295,6 +295,7 @@ de:
     SignatureRequired: 'Bitte unterschreiben Sie den Antrag.'
   Kalakotra\EFormKindererziehungszeiten\Forms\StepTrait:
     REQUIRED: '"{name}" ist erforderlich.'
+    REQUIRED_SUMMARY: 'Bitte füllen Sie die folgenden Pflichtfelder aus: {fields}'
   Kalakotra\EFormKindererziehungszeiten\Forms\Form:
     SAVE_ERROR: 'Es gab ein Problem beim Speichern Ihrer Daten. Bitte versuchen Sie es erneut.'
     BOOLEAN_YES: 'Ja'

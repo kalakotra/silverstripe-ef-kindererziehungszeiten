@@ -295,6 +295,7 @@ cs:
     SignatureRequired: 'Podepište prosím žádost.'
   Kalakotra\EFormKindererziehungszeiten\Forms\StepTrait:
     REQUIRED: 'Pole „{name}“ je povinné.'
+    REQUIRED_SUMMARY: 'Vyplňte prosím následující povinná pole: {fields}'
   Kalakotra\EFormKindererziehungszeiten\Forms\Form:
     SAVE_ERROR: 'Při ukládání vašich údajů došlo k problému. Zkuste to prosím znovu.'
     BOOLEAN_YES: 'Ano'

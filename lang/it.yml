@@ -295,6 +295,7 @@ it:
     SignatureRequired: 'Firmare la domanda.'
   Kalakotra\EFormKindererziehungszeiten\Forms\StepTrait:
     REQUIRED: '"{name}" è obbligatorio.'
+    REQUIRED_SUMMARY: 'Compilare i seguenti campi obbligatori: {fields}'
   Kalakotra\EFormKindererziehungszeiten\Forms\Form:
     SAVE_ERROR: 'Si è verificato un problema durante il salvataggio dei dati. Riprovare.'
     BOOLEAN_YES: 'Sì'

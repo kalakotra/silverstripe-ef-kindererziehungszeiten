@@ -295,6 +295,7 @@ uk:
     SignatureRequired: 'Будь ласка, підпишіть заяву.'
   Kalakotra\EFormKindererziehungszeiten\Forms\StepTrait:
     REQUIRED: 'Поле «{name}» є обов''язковим.'
+    REQUIRED_SUMMARY: 'Будь ласка, заповніть такі обов''язкові поля: {fields}'
   Kalakotra\EFormKindererziehungszeiten\Forms\Form:
     SAVE_ERROR: 'Під час збереження Ваших даних виникла проблема. Будь ласка, спробуйте ще раз.'
     BOOLEAN_YES: 'Так'

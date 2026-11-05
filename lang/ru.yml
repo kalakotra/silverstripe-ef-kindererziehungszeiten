@@ -295,6 +295,7 @@ ru:
     SignatureRequired: 'Пожалуйста, подпишите заявление.'
   Kalakotra\EFormKindererziehungszeiten\Forms\StepTrait:
     REQUIRED: 'Поле «{name}» обязательно для заполнения.'
+    REQUIRED_SUMMARY: 'Пожалуйста, заполните следующие обязательные поля: {fields}'
   Kalakotra\EFormKindererziehungszeiten\Forms\Form:
     SAVE_ERROR: 'При сохранении Ваших данных возникла проблема. Пожалуйста, попробуйте ещё раз.'
     BOOLEAN_YES: 'Да'

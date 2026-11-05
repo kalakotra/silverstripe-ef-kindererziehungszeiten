@@ -295,6 +295,7 @@ tr:
     SignatureRequired: 'Lütfen başvuruyu imzalayın.'
   Kalakotra\EFormKindererziehungszeiten\Forms\StepTrait:
     REQUIRED: '"{name}" alanı zorunludur.'
+    REQUIRED_SUMMARY: 'Lütfen aşağıdaki zorunlu alanları doldurun: {fields}'
   Kalakotra\EFormKindererziehungszeiten\Forms\Form:
     SAVE_ERROR: 'Verileriniz kaydedilirken bir sorun oluştu. Lütfen tekrar deneyin.'
     BOOLEAN_YES: 'Evet'

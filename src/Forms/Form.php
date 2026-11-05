@@ -125,7 +125,11 @@ class Form extends BaseMultiForm
             $instance = $step ?? (is_a($stepClass, MultiFormStep::class, true) ? $stepClass::singleton() : null);
 
             if ($instance) {
-                foreach ($instance->getFields()->dataFields() as $name => $field) {
+                $fields = $instance->getFields();
+                // getDataFields() replaces the deprecated dataFields() in SS 6.2
+                $dataFields = method_exists($fields, 'getDataFields') ? $fields->getDataFields() : $fields->dataFields();
+
+                foreach ($dataFields as $name => $field) {
                     if ($field instanceof SingleSelectField) {
                         $this->optionSourceCache[$stepClass][$name] = array_map('strval', $field->getSource());
                     }

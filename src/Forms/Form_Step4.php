@@ -118,12 +118,12 @@ class Form_Step4 extends MultiFormStep
     public function validateStep($data, $form)
     {
         $valid = true;
+        $values = $form->getData(); // normalised: unchecked checkboxes are 0, not missing
 
         if (
-            is_array($data)
-            && ($data['OtherPensionSystem'] ?? null) === 'yes'
-            && empty($data['CivilServicePension'])
-            && empty($data['ChurchPension'])
+            ($values['OtherPensionSystem'] ?? null) === 'yes'
+            && empty($values['CivilServicePension'])
+            && empty($values['ChurchPension'])
         ) {
             $form->sessionFieldError(
                 _t(__CLASS__ . '.PensionTypeRequired', 'Bitte wählen Sie mindestens eine Art der Versorgung.'),

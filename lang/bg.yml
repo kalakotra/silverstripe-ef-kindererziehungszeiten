@@ -295,6 +295,7 @@ bg:
     SignatureRequired: 'Моля, подпишете заявлението.'
   Kalakotra\EFormKindererziehungszeiten\Forms\StepTrait:
     REQUIRED: 'Полето „{name}“ е задължително.'
+    REQUIRED_SUMMARY: 'Моля, попълнете следните задължителни полета: {fields}'
   Kalakotra\EFormKindererziehungszeiten\Forms\Form:
     SAVE_ERROR: 'Възникна проблем при запазването на данните Ви. Моля, опитайте отново.'
     BOOLEAN_YES: 'Да'

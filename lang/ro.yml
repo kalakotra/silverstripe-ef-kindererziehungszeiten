@@ -295,6 +295,7 @@ ro:
     SignatureRequired: 'Vă rugăm să semnați cererea.'
   Kalakotra\EFormKindererziehungszeiten\Forms\StepTrait:
     REQUIRED: '„{name}” este obligatoriu.'
+    REQUIRED_SUMMARY: 'Vă rugăm să completați următoarele câmpuri obligatorii: {fields}'
   Kalakotra\EFormKindererziehungszeiten\Forms\Form:
     SAVE_ERROR: 'A apărut o problemă la salvarea datelor dumneavoastră. Vă rugăm să încercați din nou.'
     BOOLEAN_YES: 'Da'

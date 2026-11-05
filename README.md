@@ -70,7 +70,8 @@ Max. 2 children per application (form limit). Not filled on purpose: signature d
 
 ## Translations
 
-`lang/de.yml`, `en.yml`, `bs.yml`. Keys follow `<StepClass>.<Field>` and `<StepClass>.<Field>.<value>`,
+`lang/de.yml`, `en.yml`, `bs.yml`. Every label is a literal `_t(__CLASS__ . '.Field', 'German default')` (collectable by
+`i18nTextCollectorTask`); options use `<StepClass>.<Field>.<value>`, empty option `DEFAULT_SELECT`,
 which is what `BaseMultiForm::PreviewSteps()` resolves for labels and option values.
 
 ## License

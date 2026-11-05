@@ -4,7 +4,11 @@ declare(strict_types=1);
 
 namespace Kalakotra\EFormKindererziehungszeiten\Forms;
 
+use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\HeaderField;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\Validation\RequiredFieldsValidator;
 use SilverStripe\MultiForm\Models\MultiFormStep;
 
 /**
@@ -19,30 +23,28 @@ class Form_Step10 extends MultiFormStep
 
     private static $next_steps = Form_Preview::class;
 
-    private static array $required_fields = [
-        'Place',
-    ];
-
     public function getFields(): FieldList
     {
         return FieldList::create(
-            $this->header('Abschluss'),
-            $this->dropdown(
-                'AccessibleFormat',
-                'Dokumente zusätzlich in einer wahrnehmbaren Form erhalten (nur bei Sehbehinderung)',
-                [
-                    'large_print' => 'als Großdruck',
-                    'braille_short' => 'in Braille (Kurzschrift)',
-                    'braille_full' => 'in Braille (Vollschrift)',
-                    'cd' => 'als CD (Schriftdatei / Textdatei im ".doc"-Format)',
-                    'daisy' => 'als Hörmedium (CD-DAISY Format)',
-                ]
-            )->setEmptyString($this->t('AccessibleFormatNone', 'nicht erforderlich')),
-            $this->text('Place', 'Ort')
-                ->setDescription($this->t(
-                    'PlaceDescription',
-                    'Ort der Unterschrift. Das Datum wird beim Absenden automatisch eingetragen.'
-                ))
+            HeaderField::create('IntroText', _t(__CLASS__ . '.IntroText', 'Abschluss'), 4),
+            DropdownField::create('AccessibleFormat', _t(__CLASS__ . '.AccessibleFormat', 'Dokumente zusätzlich in einer wahrnehmbaren Form erhalten (nur bei Sehbehinderung)'))
+                ->setSource([
+                    'large_print' => _t(__CLASS__ . '.AccessibleFormat.large_print', 'als Großdruck'),
+                    'braille_short' => _t(__CLASS__ . '.AccessibleFormat.braille_short', 'in Braille (Kurzschrift)'),
+                    'braille_full' => _t(__CLASS__ . '.AccessibleFormat.braille_full', 'in Braille (Vollschrift)'),
+                    'cd' => _t(__CLASS__ . '.AccessibleFormat.cd', 'als CD (Schriftdatei / Textdatei im ".doc"-Format)'),
+                    'daisy' => _t(__CLASS__ . '.AccessibleFormat.daisy', 'als Hörmedium (CD-DAISY Format)'),
+                ])
+                ->setEmptyString(_t(__CLASS__ . '.AccessibleFormatNone', 'nicht erforderlich')),
+            TextField::create('Place', _t(__CLASS__ . '.Place', 'Ort'))
+                ->setDescription(_t(__CLASS__ . '.PlaceDescription', 'Ort der Unterschrift. Das Datum wird beim Absenden automatisch eingetragen.')),
         );
+    }
+
+    public function getValidator(): RequiredFieldsValidator
+    {
+        return RequiredFieldsValidator::create([
+            'Place',
+        ]);
     }
 }

@@ -96,8 +96,8 @@ class Form extends BaseMultiForm
             }
 
             return $value
-                ? _t(__CLASS__ . '.YES', 'Ja')
-                : _t(__CLASS__ . '.NO', 'Nein');
+                ? _t(__CLASS__ . '.BOOLEAN_YES', 'Ja')
+                : _t(__CLASS__ . '.BOOLEAN_NO', 'Nein');
         }
 
         // option label straight from the field source: translated if a lang file exists,
